@@ -1,0 +1,31 @@
+/* bubble.module.css */
+
+.hoverText {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0.3s ease-in-out;
+  }
+  
+  /* Bubble effect with scale, bounce, and a slight rotation */
+  .hoverText:hover {
+    transform: scale(1.5) rotate(10deg); /* Scaling up and rotating slightly */
+    color: #f59e0b; /* Change the text color */
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.8); /* Optional glowing effect */
+  }
+  
+  /* Optional keyframe for a pulsating effect (optional) */
+  @keyframes bubbleAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .hoverText:hover {
+    animation: bubbleAnimation 0.6s ease-in-out forwards;
+  }
+  
